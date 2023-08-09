@@ -1,0 +1,725 @@
+html,body{height:100%}
+body {
+	font-family:Tahoma, Arial, Verdana;
+	font-size:12px;
+	margin:0 auto;
+	padding:0;
+	color:#676767;
+	background-color:#f9fbf4;
+	height:100%;
+}
+* {
+	margin:0;
+	padding:0;
+}
+*:focus {
+	outline:none; /* removes ugly dotted border but may make template more unsuable, up to you
+					 if you want to keep it! */
+}
+.clr{clear:both}
+form{margin:0; padding:0;}
+
+/* Стиль для выделения цветом выше рамки pdf-file
+------------------------------------------------------*/
+.color90{
+          background: #DCDCF0;
+          padding: 0.5 em;
+          margin-left: 30;
+          margin-right: 30; 
+          border-style: inset;
+          border-width: thin;
+          width: 100%;
+}
+
+.colorBook{
+          FONT-FAMILY:Garamond,serif;
+          background: #DCDCF0;
+          padding: 0.5 em;
+          margin-left: 60;
+          margin-right: 60; 
+}
+.colorNew{
+          FONT-FAMILY:Garamond,serif;
+          background: #DCDCF0;
+          width: 100%;
+}
+
+
+/* Default Element Styles
+------------------------------------------------------*/
+/* heading */
+h1, h2, h3, h4, h5 {margin-bottom:10px; font-family:Tahoma, Arial, Verdana;	font-weight:normal;}
+h1 {color:#303030; font-size:34px;}
+h2 {color:#303030; font-size:25px;}
+h3 {color:#303030; font-size:22px;}
+h4 {color:#303030; font-size:20px;}
+h5 {font-size:12px; margin:3px 0px; padding:0px; font-weight:bold; letter-spacing:1px;}
+
+/* links */
+a {color:#676767;text-decoration:underline;}
+a:hover{text-decoration:underline;}
+a img{border:none;}
+
+/* lists, blockquotes and paragraphs */
+p, ul, ol, blockquote {
+	font-size:12px;
+	line-height:18px;
+	margin-bottom:10px;
+	color:#000;
+}
+ul, ol {
+	margin:5px 0 5px 20px;
+}
+li ol,
+li ul
+{
+	font-size:1.0em;
+	list-style:square;
+	margin-bottom:0;
+	margin-top:0;
+}
+li ol {list-style:decimal;}
+blockquote {
+	margin:0px;	
+	padding-left:35px;
+	/*background-image:url(../images/quote.png);*/
+	background-position:0px 5px;
+	background-repeat:no-repeat;
+}
+
+/* code */
+code {
+	font-family:Tahoma, Arial, Verdana;
+	letter-spacing:1px;
+	margin:25px 0 25px 0px;
+	display:block;
+	font-size:0.9em;
+	border-left:4px solid #676767;
+	padding:15px 10px;
+}
+
+#main_container
+{
+/*	background-image:url(../images/bg-top-container.jpg); 
+	background-repeat:repeat-x; */
+	min-height: 92%;
+}
+
+	#frame
+	{
+		background-image:url(../images/bg-top-container_n.jpg); 
+		background-repeat:repeat-x;
+		margin: 0px auto 0px auto;
+		min-width: 640px;
+		max-width: 1200px;
+		padding: 0 2%;
+	}
+
+		#top
+		{
+			width: 100%;
+			height:140px;
+			position: relative;
+		}
+			#lang 
+			{
+				position: absolute;
+				right: 3%;
+				top: 5px;
+				/*padding:6px 5px 0px 0px;*/
+			}
+			.lang-img 
+			{
+				float:left; 
+				margin-left:15px; 
+				width: 30px; 
+				height: 23px; 
+			}
+				#lang .lang-img a
+				{
+					box-shadow: 4px 3px 8px rgba(255, 255, 255, 0.54);
+				}
+
+
+				#lang .active  a
+				{
+					box-shadow: none;
+				}
+			#logo
+			{
+				width:72%; 
+				/*float:left;*/
+				position: absolute;
+				right: 1px;
+				top: 23%;
+			}
+				#pad_logo{/*padding:12px 0px 0px 5px;height: 37px;*/}
+				#pad_logo h1 
+				{
+					font-family:'Times New Roman';
+					font-size: 350%;
+					color:#fff;
+					letter-spacing: normal;
+				}
+				#pad_logo h1 span
+				{
+					color:#f81100;
+					letter-spacing: 0px;
+				}
+				#pad_logo h1 a{text-decoration: none; color: #fff; display: block;}
+				#pad_logo h1 a:hover{text-decoration: none; }		
+
+			#topmenu
+			{
+				width:72%; 
+				float:right;
+			}
+				
+				#nav 
+				{
+					margin:117px auto 0px; 
+					overflow: hidden;
+					/*float:right;*/
+				}
+				#nav ul li.last{background:none;}
+				#nav ul{ 
+					padding:0;
+					margin:0 auto;
+					width:auto;
+					list-style: none;					
+					position: relative;
+					overflow: hidden;
+					display: table;	
+				}
+				#nav li{
+					list-style:none;
+					float:left;
+					text-align:center;
+					padding:0;
+					font:normal 17px Tahoma;	
+					color:#ffffff;
+					background:url(../images/nav-divider.gif) no-repeat 100% 3px;
+				}
+				#nav li a {
+					z-index: 10;
+					display: block;
+					float: left;
+					height: 37px;
+					position: relative;
+					overflow: hidden;
+					margin: auto 12px;
+					color:#ffffff;
+					text-decoration:none;	
+				}
+				#nav li a:hover {
+					background: url(../images/lava.gif) no-repeat center 28px;
+					height:37px;		
+					color:#ffffff;
+				}	
+				#nav li .active {
+					background: url(../images/lava.gif) no-repeat center 28px;
+					height:37px;		
+					color:#ffffff;
+				}	
+				#nav a:link{color:#ffffff; text-decoration:none;}	
+				#nav a:hover{color:#ffffff; text-decoration:none;}	
+				#nav a:active{color:#ffffff; text-decoration:none;}
+			
+			
+			
+
+			.foto1
+			{
+				border: 2px solid #fff;
+				position: absolute;
+				top: 25%;
+				width: 22%;
+			}
+
+.foto1 img {
+	width: 100%;
+}
+			.foto2
+			{
+				border: 2px solid #fff;
+				position: absolute;
+				top: 102%;
+				width: 100%;
+				text-align: center;
+				font-size: 1.5em;
+			}
+			
+		#content
+		{
+			/*padding:43px 0px 30px 0px; */
+			overflow: hidden;
+			width: 100%;
+			/*float:left;*/
+		}	
+		
+			#content1
+			{
+				float:left; 
+				width:25%;
+				margin: 28.4% 0 0;
+			}
+			
+				.menu-cat
+				{
+						list-style: none;
+						margin: 0;
+						padding: 0;
+				}
+				.menu-cat ul
+				{
+					margin: 0px 1px 0px 5%;
+				}
+
+					.menu-cat li
+					{
+						background: none repeat scroll 0 0 #d0d0d0;
+						font-size: 17px;
+						margin: 7px 0;
+						padding: 10px 2%;
+						width: 96%;
+					}
+					.menu-cat li.sub-g{
+						background-color: transparent;
+						padding-top: 0;
+						padding-bottom: 0;
+					}
+						.menu-cat ul li
+						{
+							background: none;
+							padding: 0;
+							margin: 15px 0px;
+						}
+							.menu-cat ul li a
+							{
+								text-decoration: none;
+								font-weight: normal;
+								color: #000;
+							}
+							.menu-cat ul li a:hover
+							{
+								text-decoration: underline;								
+							}
+					
+
+					.menu-cat li a
+					{
+						text-decoration: none;
+						font-weight: normal;
+						color: #000;
+					}
+
+					.menu-cat li a:hover
+					{
+					   text-decoration: underline;    
+					}
+
+					.menu-cat li a.active
+					{
+						color:#f81100;
+					}
+					/*
+					.menu-cat li h4
+					{
+						background: none repeat scroll 0 0 #787878;
+						font-size: 17px;
+						margin: 7px 0;
+						padding: 10px 12px;
+						width: 235px;
+					}
+					*/
+			#content2
+			{
+				float:right; 
+				width:72%; 
+				margin-left:0%;
+				padding-top: 1px;
+			}
+				#content2 h1, #content2 h2, #content2 h3, #content2 h4
+				{
+					 border-bottom: 1px solid #71736b;
+					 padding-bottom: 10px;
+				}
+
+#content2 .fraza {
+	margin-right: 25px;
+	width: 100%;
+}
+				#main_slides
+				{ 
+					text-align: center;
+					margin-top: 10px;
+					margin-right: 20px;
+				}				
+				#slides-text 
+				{
+					width: 440px; 
+					/*height:200px; */
+					float:right; 
+					padding-left:3px; 
+					margin: 41px 120px 0 0;
+				}
+					
+					#slides-text h3 
+					{
+						border-bottom:0px solid #71736b; 
+						padding-bottom:3px;
+						font-style: italic;
+					}
+					.brochure{margin-top:30px;}
+				
+				.toright
+				{
+					text-align: right;
+					font-size: 150%;
+					font-weight: bold;
+				}
+				.fraza
+				{
+					margin: 10% 1px 1px 2px;
+					float: left;
+					font-size: 120%;					
+				}
+				.fraza h1
+				{
+					margin: 0px 0px 15px 0px;					
+				}
+				.fraza1
+				{
+					margin: 30px 1px 1px 2px;
+					float: right;
+					font-size: 150%;
+					font-weight: bold;
+				}
+		
+
+/* Обратная связь */
+#content-inner 
+{
+	/*float:left; */
+	width:77%;
+	margin-top: 70px;
+	margin-left: 300px;
+}		
+
+	#head-top-inner 
+	{
+		width:95%; 
+		height:25px; 
+		margin:13px 0px 10px 0px; 
+		padding-bottom:7px; 
+		/*float:left;*/ 
+		border-bottom:1px solid #71736b;
+	}
+	#contactFormArea {width:95%; color:#6b6b6b;}
+	.input {background-color: #ffffff; border:1px solid #cfd4c3; width:80%; padding:5px 5px 5px 5px; margin:0px; color:#6b6b6b;}
+	.input-submit { background-image:url(../images/but-send.gif); background-repeat:no-repeat; padding:0px; margin:0px; border:0px; width:93px; height:28px; cursor:pointer; float:right; margin-right:97px;}
+	.textarea {background-color: #ffffff; border:1px solid #cfd4c3; width:80%; padding:5px 5px 5px 5px; margin:0px; color:#6b6b6b;}
+	.facebook {float:left; width:150px; padding:10px 0px 20px 0px;}
+	.twitter {float:left; width:150px; padding:10px 0px 20px 0px;}
+	.social-text {float:left; padding-top:8px;}
+	.social-icon {float:left; padding-right:5px}
+	.social-text a {color:#7a7a7a;text-decoration:none;}
+
+
+		
+#bottom_container{
+    background-image:url(../images/bg-bottom-container.gif); 
+    background-repeat:repeat-x; 
+    height:84px; 
+    margin:0px auto 0px auto; 
+    clear:left;
+    min-width: 980px;
+    padding: 0 2%;
+}
+.maincontent h3 {border-bottom:1px solid #71736b; padding-bottom:3px;}
+
+/* Frame
+------------------------------------------------------*/
+
+
+
+/* Top
+------------------------------------------------------*/
+
+
+#pad_logo .active {
+    background: url(../images/lava.gif) no-repeat center 28px;
+    height:37px;		
+    color:#ffffff;    
+}
+#pad_logo a:hover {
+    background: url(../images/lava.gif) no-repeat center 28px;
+    height:37px;		
+    color:#ffffff;    
+}
+
+
+
+
+#head-top {
+    width:100%; height:25px; border-bottom:1px solid #71736b; padding-bottom:8px; margin:12px 0px 10px 0px; overflow: hidden;
+    /*float:left;*/
+}
+
+#head-title {/*width:630px;*/ padding-bottom:3px; float:left;}
+
+/* Top Navigation bar menu styling */
+
+
+
+/* Content
+------------------------------------------------------*/
+.imgleft{float:left; padding-right:15px;}
+.imgright{float:right; padding-left:15px;}
+.imgleft-box{float:left; border:solid 1px #cfd4c3; padding:6px; margin-right:15px; background-color:#f9fbf4;}
+.imgright-box{float:right; border:solid 1px #cfd4c3; padding:6px; margin-left:15px; background-color:#f9fbf4;}
+
+#content3{float:left; width:300px; margin-left:30px;}
+.map{border:solid 1px #dadada; padding:6px; margin:0px; background-color:#fbfbfb;}
+.newsfeed{float:right; margin-top:4px; margin-right:4px;}
+
+
+
+/* Footer
+------------------------------------------------------*/
+#footer{width:980px; margin:0px auto 0px auto; color:#787773; clear:both;}
+#foot{padding:13px 0px 0px 0px; font-size:11px; line-height:18px; float:left;}
+#foot a, #foot a:visited{color:#787773; text-decoration:none;}
+#foot a:hover{text-decoration:underline;}
+.left-foot{width:980px; text-align: center;color: #fff;}
+
+.right-foot {
+	/*background-image:url(../images/twitter-bg.jpg);*/
+	background-repeat: no-repeat;
+	width: 456px;
+	height: 34px;
+	margin-top: 10px;
+	float: left;
+}
+.twitter-code{width:400px; margin-top:7px; margin-left:8px; text-align:center; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+
+
+
+
+.main-text .toright {text-align: right; font-style:  italic; font-size: 15px;}
+.main-text .fraza {font-style:  normal; font-size: 15px;}
+
+#threed-slider div{position:absolute; z-index:0;}
+#threed-slider div.current{z-index:2;}
+#threed-slider div.previous{z-index:1;}
+    
+.pic{
+    display: table-row;
+    list-style: none outside none;
+}   
+.pic li{
+    display: table-cell;
+    text-align: center;
+	width: 16%;
+}
+.pic li.first{
+	text-align: left;
+	width: 16%;
+} 
+.pic li.last{
+	text-align: right;
+	width: 16%;
+} 
+
+fieldset { border:0;margin:0;padding:0; }
+label {  padding-right:15px; float:left; width:15%;}
+input.text{ width:290px;font:12px/12px 'courier new',courier,monospace;color:#333;padding:3px;margin:1px 0; }
+
+/* Для Аккордеона */
+
+.nav-catalog{
+	padding:10px 10px 20px 0px;
+	border-bottom:1px solid #e1e1e1;
+}
+.nav-catalog h4{
+margin-bottom: 5px;
+}
+
+.nav-catalog h4 a{
+font-size: 17px !important;
+}
+
+.nav-catalog  a.begin{
+font-size: 17px !important;
+}
+
+.nav-catalog ul{
+	padding:5px 0 5px 0px;
+	list-style:none;
+}
+.nav-catalog ul li{
+	margin: 0;
+}
+.nav-catalog li{
+	margin: 0 0 5px 0;
+}
+.nav-catalog h3 li{
+	margin: 0 0 5px 0;
+	list-style-position: outside;
+}	
+.nav-catalog li a{
+	font: 12px Verdana;
+	color:#000;
+	text-decoration:none;
+}
+.nav-catalog li a:hover{
+	font: 12px Verdana;
+	color:#1b7cb1;
+	text-decoration:none;
+}
+.br_c {
+	margin-top: 15px;
+}
+.pic img {
+	height: 200px;
+}
+
+.mapin{
+	position:relative;
+	padding-bottom:75%; /*		450/600		*/
+	height:0;
+	overflow:hidden;
+}
+.mapin iframe{
+	position:absolute; top:0; left:0; width:100%; height:100%;
+}
+
+@media screen and (max-width: 1145px) {
+	.pic img {
+		height: 190px;
+	}
+
+	#content1 {
+		margin-top: 30%;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.pic img {
+		height: 180px;
+	}
+}
+@media screen and (max-width: 1050px) {
+	.pic img {
+		height: 170px;
+	}
+
+	#nav li a {
+		margin: auto 11px;
+	}
+}
+
+@media screen and (max-width: 1005px) {
+	#pad_logo h1 {
+		font-size: 300%;
+	}
+}
+
+
+@media screen and (max-width: 952px) {
+	.foto2 {
+		font-size: 1.4em;
+	}
+
+	.pic img {
+		height: 150px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.foto2 {
+		font-size: 1em;
+	}
+
+	#nav li a {
+		margin: auto 10px;
+	}
+}
+
+@media screen and (max-width: 870px) {
+	#pad_logo h1 {
+		font-size: 290%;
+	}
+
+	#pad_logo h1 span {
+		letter-spacing: -2px;
+	}
+}
+
+
+@media screen and (max-width: 850px) {
+	.pic img {
+		height: 140px;
+	}
+
+	#nav li a {
+		margin: auto 8px;
+	}
+}
+
+@media screen and (max-width: 809px) {
+	#pad_logo h1 {
+		font-size: 250%;
+	}
+
+	.pic img {
+		height: 120px;
+	}
+
+	#nav li a {
+		margin: auto 7px;
+		letter-spacing: -1px;
+	}
+}
+
+@media screen and (max-width: 713px) {
+	#pad_logo h1 {
+		font-size: 240%;
+	}
+
+	#pad_logo h1 {
+		letter-spacing: -1px;
+	}
+
+	#lang {
+		right: 4%;
+	}
+
+	.foto2 {
+		font-size: 0.9em;
+	}
+
+	.pic img {
+		height: 107px;
+	}
+
+	#nav li {
+		font: 16px Tahoma;
+	}
+
+	#nav li a {
+		margin: auto 4px;
+	}
+
+	.fraza {
+		margin-top: 7%;
+	}
+
+	#slides-text {
+		margin-right: 6%;
+	}
+
+	.fraza1 {
+		margin-right: 7%;
+	}
+}

@@ -1,0 +1,25 @@
+AddDefaultCharset utf-8
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /amosov/
+RewriteRule ^(ru|en|)$ index.php?lang=$1 [L]
+RewriteRule ^([A-Za-z_]+?)(ru|en|)/?([0-9]*)$ index.php?cont=$1&lang=$2&id=$3 [L]
+RewriteRule ^([A-Za-z_]*?)(ru|en|)/(update|updater|archive|restore|add|delete)/(\d+)$ index.php?cont=$1&act=$3&lang=$2&id=$4 [L]
+
+ErrorDocument 404 /lost
+#RewriteRule ^main(ru|en)? index.php?cont=main&lang=$1 [L]
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule .* index.php
+
+
+#RewriteRule ^product/([a-z0-9-]+) product.php?product=$1
+#RewriteRule ^category/(\d+) index.php?category=$1 [QSA]
+
+# product.php?product=11608
+# product/11608
+
+# ?category=691
+# category/691
