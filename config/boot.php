@@ -20,7 +20,7 @@ class boot
     const ROOTT  =	'/amosov/views/';
     const SLIDE = '/amosov/views/images/slide/';
     //const PATH  = 'http://amosov2/amosov/';
-    const PATH  = 'http://www.icfcst.kiev.ua/amosov/';
+    const PATH  = 'http://icfcst.kiev.ua/amosov/';
     const LOGIN = 'icfcst_amosov';
     const PASS = '0fbe5ed0ad8c61db79ddecf52d9ff74c53872a61';
     const MYEMAIL = 'icfcst@i.ua';
